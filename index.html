@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b">
+  <title>KNMI Weerapp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">WEER & ZON</p>
+        <h1 id="place">Tiel</h1>
+        <p id="updated">Weerbericht wordt geladen…</p>
+      </div>
+      <button id="locate" class="locate">Gebruik mijn locatie</button>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">HUIDIG WEER</p>
+      <div class="temperature"><span id="temp">--</span><sup>°C</sup></div>
+      <h2 id="condition">Even geduld…</h2>
+      <p class="muted" id="feels">Gegevens worden opgehaald</p>
+    </section>
+
+    <section class="stats">
+      <article><span>🌧️ Neerslag vandaag</span><strong id="rain">--</strong></article>
+      <article><span>💨 Wind</span><strong id="wind">--</strong></article>
+      <article><span>🌅 Zonsopkomst</span><strong id="sunrise">--</strong></article>
+      <article><span>🌇 Zonsondergang</span><strong id="sunset">--</strong></article>
+    </section>
+
+    <section class="sun-panel">
+      <p class="eyebrow">ZON VANDAAG</p>
+      <div class="sun-total"><span id="sunHours">--</span><small>uur zon verwacht</small></div>
+      <p id="sunPeak" class="peak">Moment met de meeste zon wordt berekend…</p>
+      <div class="hourly" id="hourly"></div>
+      <p class="hint">De urenbalk toont per uur de verwachte zonneschijnduur.</p>
+    </section>
+
+    <section class="week">
+      <p class="eyebrow">KOMENDE 7 DAGEN</p>
+      <div id="days" class="days"><p>Verwachting wordt geladen…</p></div>
+    </section>
+
+    <footer>Weerdata: Open-Meteo • Locatie: <span id="sourcePlace">Tiel</span></footer>
+    <p class="disclaimer">Dit is een aparte weerapp naast Mijn-Weer. De gegevens komen momenteel van Open-Meteo en niet rechtstreeks van het KNMI.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
